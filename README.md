@@ -12,6 +12,6 @@ JS: https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle
 
 ### Lightbox for Bootstrap 5
 
-Lightbox for Bootstrap 5 v1.8.3
+Lightbox for Bootstrap 5 v1.8.3 (https://trvswgnr.github.io/bs5-lightbox/)
 
 JS: https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js
