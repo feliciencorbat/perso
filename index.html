@@ -15,14 +15,14 @@
     <div class="accordion" id="accordionPersonalProject">
 
         <!-- Identity Section -->
-        <div class="accordion-item">
+        <div class="accordion-item" id="accordion-perso">
             <h2 class="accordion-header" id="identity">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#identityOpened" aria-expanded="true" aria-controls="identityOpened">
                     Identité
                 </button>
             </h2>
-            <div id="identityOpened" class="accordion-collapse collapse show" aria-labelledby="identity">
+            <div id="identityOpened" class="accordion-collapse collapse show" aria-labelledby="identity" data-bs-parent="#accordion-perso">
                 <div class="accordion-body">
                     <!-- Grid doc: https://getbootstrap.com/docs/5.3/layout/grid/#nesting -->
                     <div class="container">
@@ -62,7 +62,7 @@
                     Quête / But / Objectif
                 </button>
             </h2>
-            <div id="goalsClosed" class="accordion-collapse collapse" aria-labelledby="goals">
+            <div id="goalsClosed" class="accordion-collapse collapse" aria-labelledby="goals" data-bs-parent="#accordion-perso">
                 <div class="accordion-body">
                     <div class="container">
                         <h2>Analyse SWOT</h2>
@@ -131,6 +131,9 @@
                                         <p class="card-text">
                                             Menace de surcharge sensorielle - Burn-out
                                         </p>
+                                        <p class="card-text">
+                                            
+                                      </p>
                                     </div>
                                 </div>
                             </div>
@@ -147,11 +150,14 @@
                         Environnement visé
                     </button>
                 </h2>
-                <div id="environmentClosed" class="accordion-collapse collapse" aria-labelledby="environment">
+                <div id="environmentClosed" class="accordion-collapse collapse" aria-labelledby="environment" data-bs-parent="#accordion-perso">
                     <div class="accordion-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8">
+                      <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                    <p>Je souhaite travailler dans une entreprise avec une vision de développement
+                                        durable. J'aime les visions à long terme à tous les niveaux.
+                                    </p>
                                     <p>Je souhaite travailler dans une entreprise avec une vision de développement
                                         durable. J'aime les visions à long terme à tous les niveaux.
                                     </p>
@@ -198,7 +204,7 @@
                         Valeur et utilité
                     </button>
                 </h2>
-                <div id="valueClosed" class="accordion-collapse collapse" aria-labelledby="value">
+                <div id="valueClosed" class="accordion-collapse collapse" aria-labelledby="value" data-bs-parent="#accordion-perso">
                     <div class="accordion-body">
                         <ul class="list-group">
                             <li class="list-group-item">Passionné</li>
@@ -218,7 +224,7 @@
                     Moi, mon personnage
                 </button>
             </h2>
-            <div id="meClosed" class="accordion-collapse collapse" aria-labelledby="me">
+            <div id="meClosed" class="accordion-collapse collapse" aria-labelledby="me" data-bs-parent="#accordion-perso">
                 <div class="accordion-body">
                     <h2>Qui êtes-vous ?</h2>
                     <p>Je suis un biologiste de formation avec un parcours tortueux. J'ai été animateur biologiste dans un centre nature et enseignant de sciences.</p>
@@ -303,22 +309,92 @@
                             </div>
                         </div>
 
-                        <p>Depuis longtemps (environ 20 ans), je "bricole" en développement via mon site web <a
-                                href="https://champis.net">champis.net</a>.</p>
-
-                        <figure class="figure">
-                            <a href="styles/photos/champisnet.png" data-toggle="lightbox">
-                                <img src="./styles/photos/champisnet.png" class="img-thumbnail rounded"
-                                     alt="Champis.net">
-                            </a>
-                            <figcaption class="figure-caption">Site web <a href="https://champis.net">champis.net</a>
-                            </figcaption>
-                        </figure>
-
                         <h2>Avec quoi venez-vous ?</h2>
                         <p>Je viens avec diverses compétences de langages (php, Python, Java), différents frameworks
                             (Bootstrap, Symfony, Api Platform, ReactJS) et différents environnements (Docker, terminal
                             linux)</p>
+
+                            <h3>Quelques applications web réalisées</h3>
+                            <div class="container">
+                              <div class="row">
+                                  
+                                  <div class="col-lg-4 col-md-6 mb-3">
+                                    <!-- Card doc: https://getbootstrap.com/docs/5.3/components/card/#images -->
+                                    <div class="card" style="width: 18rem;">
+                                      <a href="https://champis.net">
+                                        <img src="./styles/photos/champisnet.png" class="card-img-top" alt="Champis.net">
+                                      </a>
+                                      <div class="card-body">
+                                        <h5 class="card-title">Champis.net</h5>
+                                        <p class="card-text">Site web de mycologie avec un forum de discussion phpBB.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 mb-3">
+                                    <div class="card" style="width: 18rem;">
+                                      <a href="https://mycocarto.net">
+                                        <img src="./styles/photos/mycocartoch.png" class="card-img-top" alt="Mycocarto.ch">
+                                      </a>
+                                      <div class="card-body">
+                                        <h5 class="card-title">Mycocarto.ch</h5>
+                                        <p class="card-text">Application web de cartographie des champignons réalisée avec Symfony (plus utilisé)</p>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 mb-3">
+                                    <div class="card" style="width: 18rem;">
+                                      <a href="https://api.champis.net">
+                                        <img src="./styles/photos/apichampisnet.png" class="card-img-top" alt="Api.champis.net">
+                                      </a>
+                                      <div class="card-body">
+                                        <h5 class="card-title">Api.champis.net</h5>
+                                        <p class="card-text">Api REST de champis.net réalisée avec API Platform</p>
+                                      </div>
+                                    </div>
+                                  </div>
+  
+                                <div class="col-lg-4 col-md-6 mb-3">
+                                  <div class="card" style="width: 18rem;">
+                                    <a href="https://expo.champis.net">
+                                      <img src="./styles/photos/expochampisnet.png" class="card-img-top" alt="Expo.champis.net">
+                                    </a>
+                                    <div class="card-body">
+                                      <h5 class="card-title">Expo.champis.net</h5>
+                                      <p class="card-text">Application de gestion des expositions de champignons réalisé avec NextJS</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-3">
+                                  <div class="card" style="width: 18rem;">
+                                    <a href="https://smajoie.ch">
+                                      <img src="./styles/photos/smajoiech.png" class="card-img-top" alt="Smajoie.ch">
+                                    </a>
+                                    <div class="card-body">
+                                      <h5 class="card-title">Smajoie.ch</h5>
+                                      <p class="card-text">Site web de la société mycologique d'Ajoie réalisé avec Wordpress</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-3">
+                                  <div class="card" style="width: 18rem;">
+                                    <a href="https://champignons-geneve.ch">
+                                      <img src="./styles/photos/champignonsgenevech.png" class="card-img-top" alt="Champignons-geneve.ch">
+                                    </a>
+                                    <div class="card-body">
+                                      <h5 class="card-title">Smajoie.ch</h5>
+                                      <p class="card-text">Site web de la société mycologique de Genève réalisé avec Wordpress</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                            </div>
+
                         <h2>Comment j'aimerais terminer cette formation ?</h2>
                         <p>Je souhaiterais terminer avec des connaissances plus approfondies et un code toujours plus
                             performant et réutilisable sur le long terme.</p>
